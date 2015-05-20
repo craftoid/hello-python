@@ -12,7 +12,7 @@ api = tweepy.API(auth)
 
 print("Tweeting at %s" % api.me().name)
 
-if len(sys.argv) == 0:
+if len(sys.argv) == 1:
 	api.update_status(status="I tweet therefor I am!")
 else:
 	api.update_status(status=" ".join(sys.argv[1:]))
